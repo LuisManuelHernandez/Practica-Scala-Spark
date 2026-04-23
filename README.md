@@ -1,4 +1,4 @@
-## 🚀 Spark & Scala: Big Data Processing Solutions
+## 🚀 Spark & Scala: Big Data Processing
 
 Este repositorio contiene la implementación técnica de una serie de ejercicios avanzados de procesamiento de datos utilizando Apache Spark y Scala. El proyecto abarca desde la manipulación de datos estructurados hasta la implementación de lógica personalizada y pruebas unitarias para garantizar la calidad del código.
 
