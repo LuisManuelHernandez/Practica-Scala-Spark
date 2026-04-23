@@ -13,26 +13,18 @@ Este repositorio contiene la implementación técnica de una serie de ejercicios
 El proyecto se divide en dos componentes principales:
 
 1. Núcleo de Procesamiento (Examen.scala)
-Contiene la lógica de negocio distribuida, organizada en los siguientes módulos:
-
-Operaciones Básicas: Filtrado dinámico, proyecciones y ordenación de datos académicos.
-
-Lógica Personalizada (UDF): Implementación de funciones de usuario para la clasificación de datos en tiempo real.
-
-Relaciones Complejas: Join de DataFrames de estudiantes y calificaciones para el cálculo de promedios ponderados.
-
-Arquitectura RDD: Implementación de un flujo de trabajo para el conteo de frecuencias (WordCount) mediante el paradigma funcional.
-
-ETL de Ventas: Pipeline para calcular ingresos totales (cantidad * precio_unitario) con agrupaciones por producto.
+- Contiene la lógica de negocio distribuida, organizada en los siguientes módulos:
+- Operaciones Básicas: Filtrado dinámico, proyecciones y ordenación de datos académicos.
+- Lógica Personalizada (UDF): Implementación de funciones de usuario para la clasificación de datos en tiempo real.
+- Relaciones Complejas: Join de DataFrames de estudiantes y calificaciones para el cálculo de promedios ponderados.
+- Arquitectura RDD: Implementación de un flujo de trabajo para el conteo de frecuencias (WordCount) mediante el paradigma funcional.
+- ETL de Ventas: Pipeline para calcular ingresos totales (cantidad * precio_unitario) con agrupaciones por producto.
 
 2. Validación y Calidad (examenTest.scala)
-Este archivo contiene la suite de pruebas que asegura que cada transformación de Spark produzca los resultados esperados.
-
-Validación de esquemas.
-
-Pruebas de integridad para los Joins.
-
-Verificación de la lógica de las UDFs y los acumuladores en RDDs.
+- Este archivo contiene la suite de pruebas que asegura que cada transformación de Spark produzca los resultados esperados.
+- Validación de esquemas.
+- Pruebas de integridad para los Joins.
+- Verificación de la lógica de las UDFs y los acumuladores en RDDs.
 
 ⚙️ Configuración del Entorno
 Requisitos:
