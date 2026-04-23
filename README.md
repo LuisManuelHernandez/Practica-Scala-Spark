@@ -1,54 +1,45 @@
-# Practica-Scala-Spark
-En el siguiente ejercicio práctico se me pidió la solución de 5 ejercicios en Spark usando lenguaje Scala. También se usó un CSV para la solución del ejercicio 5. 
-Esta practica permite demostrar los conocimientos en el modulo de Big Data Processing usando el programa de IntellliJ y Spark.
+## 🚀 Spark & Scala: Big Data Processing Solutions
 
+Este repositorio contiene la implementación técnica de una serie de ejercicios avanzados de procesamiento de datos utilizando Apache Spark y Scala. El proyecto abarca desde la manipulación de datos estructurados hasta la implementación de lógica personalizada y pruebas unitarias para garantizar la calidad del código.
 
-Práctica:
-package examen_estructura
+🛠️ Tecnologías y Conceptos Clave
+- Lenguaje: Scala 2.12+.
+- Framework: Apache Spark 3.x.
+- Testing: Implementación de pruebas unitarias con ScalaTest para validar la lógica de las transformaciones.
+- Técnicas de Ingeniería: Joins, Agregaciones masivas, UDFs (User Defined Functions) y operaciones de ventana.
 
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{DataFrame, SparkSession}
+📘 Contenido del Repositorio
 
-object Examen {
+El proyecto se divide en dos componentes principales:
 
-  /** Ejercicio 1: Crear un DataFrame y realizar operaciones básicas
-   * Pregunta: Crea un DataFrame a partir de una secuencia de tuplas que contenga información sobre
-   * estudiantes (nombre, edad, calificación).
-   * Realiza las siguientes operaciones:
-   *
-   * Muestra el esquema del DataFrame.
-   * Filtra los estudiantes con una calificación mayor a 8.
-   * Selecciona los nombres de los estudiantes y ordénalos por calificación de forma descendente.
-   */
-  def ejercicio1(estudiantes: DataFrame)(implicit spark: SparkSession): DataFrame = ???
+1. Núcleo de Procesamiento (Examen.scala)
+Contiene la lógica de negocio distribuida, organizada en los siguientes módulos:
 
-  /** Ejercicio 2: UDF (User Defined Function)
-   * Pregunta: Define una función que determine si un número es par o impar.
-   * Aplica esta función a una columna de un DataFrame que contenga una lista de números.
-   */
-  def ejercicio2(numeros: DataFrame)(implicit spark: SparkSession): DataFrame = ???
+Operaciones Básicas: Filtrado dinámico, proyecciones y ordenación de datos académicos.
 
-  /** Ejercicio 3: Joins y agregaciones
-   * Pregunta: Dado dos DataFrames,
-   * uno con información de estudiantes (id, nombre)
-   * y otro con calificaciones (id_estudiante, asignatura, calificacion),
-   * realiza un join entre ellos y calcula el promedio de calificaciones por estudiante.
-   */
-  def ejercicio3(estudiantes: DataFrame, calificaciones: DataFrame): DataFrame = ???
+Lógica Personalizada (UDF): Implementación de funciones de usuario para la clasificación de datos en tiempo real.
 
+Relaciones Complejas: Join de DataFrames de estudiantes y calificaciones para el cálculo de promedios ponderados.
 
-  /** Ejercicio 4: Uso de RDDs
-   * Pregunta: Crea un RDD a partir de una lista de palabras y cuenta la cantidad de ocurrencias de cada palabra.
-   */
+Arquitectura RDD: Implementación de un flujo de trabajo para el conteo de frecuencias (WordCount) mediante el paradigma funcional.
 
-  def ejercicio4(palabras: List[String])(implicit spark: SparkSession): RDD[(String, Int)] = ???
+ETL de Ventas: Pipeline para calcular ingresos totales (cantidad * precio_unitario) con agrupaciones por producto.
 
-  /**
-   * Ejercicio 5: Procesamiento de archivos
-   * Pregunta: Carga un archivo CSV que contenga información sobre
-   * ventas (id_venta, id_producto, cantidad, precio_unitario)
-   * y calcula el ingreso total (cantidad * precio_unitario) por producto.
-   */
-  def ejercicio5(ventas: DataFrame)(implicit spark: SparkSession): DataFrame = ???
+2. Validación y Calidad (examenTest.scala)
+Este archivo contiene la suite de pruebas que asegura que cada transformación de Spark produzca los resultados esperados.
 
-}
+Validación de esquemas.
+
+Pruebas de integridad para los Joins.
+
+Verificación de la lógica de las UDFs y los acumuladores en RDDs.
+
+⚙️ Configuración del Entorno
+Requisitos:
+- Java JDK 8 o 11.
+- Scala SDK.
+- SBT (Scala Build Tool).
+
+📂 Estructura de Archivos
+- Examen.scala: Contiene las funciones de transformación y procesamiento.
+- examenTest.scala: Suite de tests unitarios utilizando Matchers y TestInit.
